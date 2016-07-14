@@ -31,6 +31,7 @@ Script
 
 
 
+
 @Debian 8@
 
 wget https://raw.githubusercontent.com/najmihamdi/pritunl/master/debian8.sh
@@ -38,6 +39,8 @@ wget https://raw.githubusercontent.com/najmihamdi/pritunl/master/debian8.sh
 chmod +x debian8.sh
 
 ./debian8.sh
+
+
 
 
 @Ubuntu 14@
