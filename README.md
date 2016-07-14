@@ -30,7 +30,9 @@ Ubuntu 14
 wget https://raw.githubusercontent.com/najmihamdi/pritunl/master/ubuntu14.sh
 chmod +x ubuntu14.sh
 ./ubuntu14.sh
-Ingin beli VPS Beli di DigitalOcean
+
+
+Ingin beli VPS Beli SILA KE DigitalOcean :- https://m.do.co/c/ec4f29ced665
 
 ----------------------------------------
 
