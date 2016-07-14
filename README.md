@@ -22,6 +22,12 @@ Script ini hanya mengandungi
 
 -User Status
 
+-Squid
+
+-Firewall
+
+-Protection DDOS
+
 -TimeZone : Malaysia
 
 -----------------------------------------
