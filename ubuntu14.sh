@@ -63,7 +63,7 @@ sed -i '/SixXS IPv6/d' config.php
 cd
 
 # Install Status User
-wget userstatus.conf
+wget userstatus.conf "https://raw.githubusercontent.com/drcyber96/PRITUNL-AUTO-SCRIP/master/conf/squid.conf" 
 
 
 # About
