@@ -43,6 +43,8 @@ chmod +x debian8.sh
 
 
 
+
+
 @Ubuntu 14@
 
 wget https://raw.githubusercontent.com/najmihamdi/pritunl/master/ubuntu14.sh
