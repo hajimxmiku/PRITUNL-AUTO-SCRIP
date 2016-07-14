@@ -35,7 +35,7 @@ apt-get -y install nginx php5-fpm php5-cli
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/zero9911/pritunl/master/conf/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/najmihamdi/pritunl/master/conf/nginx.conf"
 mkdir -p /home/vps/public_html
 echo "<pre>Setup by DRCYBER </pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
@@ -71,10 +71,10 @@ echo "-MongoDB"
 echo "-Vnstat"
 echo "-Web Server"
 echo "-Squid Proxy Port 7166,60000"
-echo "BY MKSSHVPN"
+echo "BY DRCYBER"
 echo "TimeZone   :  Malaysia"
 echo "Vnstat     :  http://$MYIP:81/vnstat"
 echo "Pritunl    :  https://$MYIP"
 echo "Sila login ke pritunl untuk proceed step seterusnya"
-echo "Sila copy code dibawah untuk Pritunl anda"
+echo "Sila copy code dibawah dan paste untuk masuk ke Pritunl anda"
 pritunl setup-key
