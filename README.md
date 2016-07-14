@@ -20,8 +20,6 @@ Script ini hanya mengandungi
 
 -Squid Proxy Port 7166,60000"
 
--User Status
-
 -Squid
 
 -Firewall
