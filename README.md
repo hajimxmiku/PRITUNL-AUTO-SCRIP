@@ -34,7 +34,7 @@ Script
 
 @Debian 8@
 
-wget https://raw.githubusercontent.com/drcyber96/pritunl/master/debian8.sh
+wget https://raw.githubusercontent.com/drcyber96/PRITUNL-AUTO-SCRIP/master/debian8.sh
 
 chmod +x debian8.sh
 
@@ -47,7 +47,7 @@ chmod +x debian8.sh
 
 @Ubuntu 14@
 
-wget https://raw.githubusercontent.com/drcyber96/pritunl/master/ubuntu14.sh
+wget https://raw.githubusercontent.com/drcyber96/PRITUNL-AUTO-SCRIP/master/ubuntu14.sh
 
 chmod +x ubuntu14.sh
 
