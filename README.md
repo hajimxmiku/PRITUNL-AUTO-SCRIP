@@ -27,14 +27,18 @@ Script ini hanya mengandungi
 Script
 
 
-Debian 8
+-COPY PASTE SAHAJA PADA PUTTY DAN TUNGGU PROSES INSTALL SEHINGGA SELESAI
+
+
+
+@Debian 8@
 
 wget https://raw.githubusercontent.com/najmihamdi/pritunl/master/debian8.sh
 chmod +x debian8.sh
 ./debian8.sh
 
 
-Ubuntu 14
+@Ubuntu 14@
 
 wget https://raw.githubusercontent.com/najmihamdi/pritunl/master/ubuntu14.sh
 chmod +x ubuntu14.sh
