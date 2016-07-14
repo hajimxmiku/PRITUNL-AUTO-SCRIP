@@ -18,7 +18,7 @@ systemctl enable mongod pritunl
 # Install Squid
 apt-get -y install squid3
 cp /etc/squid3/squid.conf /etc/squid3/squid.conf.orig
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/drcyber96/pritunl/master/conf/squid.conf" 
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/drcyber96/PRITUNL-AUTO-SCRIP/master/conf/squid.conf" 
 MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | grep -v '192.168'`;
 sed -i s/xxxxxxxxx/$MYIP/g /etc/squid3/squid.conf;
 service squid3 restart
@@ -36,11 +36,11 @@ apt-get -y install nginx php5-fpm php5-cli
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/drcyber96/pritunl/master/conf/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/drcyber96/PRITUNL-AUTO-SCRIP/master/conf/nginx.conf"
 mkdir -p /home/vps/public_html
 echo "<pre>Setup by DRCYBER </pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/drcyber96/pritunl/master/conf/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/drcyber96/PRITUNL-AUTO-SCRIP/master/conf/vps.conf"
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 service php5-fpm restart
 service nginx restart
@@ -92,7 +92,6 @@ JUMLAH="$(awk -F: '$3 >= 500 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo "---------------------------------------------"
 echo " ONLINE : $ON     OFFLINE : $OFF      [ DRCYBER ] "
 echo "------------------------------------------
-
 # About
 clear
 echo "Script ini hanya mengandungi :-"
@@ -105,7 +104,7 @@ echo "BY DRCYBER"
 echo "TimeZone   :  Malaysia"
 echo "Vnstat     :  http://$MYIP:81/vnstat"
 echo "Pritunl    :  https://$MYIP"
-echo "User Status:  Untuk Run User Status Paste   ./user"
+echo "UserStatus :  Untuk Run User Status Paste   ./user"
 echo "Sila login ke pritunl untuk proceed step seterusnya"
 echo "Sila copy code dibawah dan paste untuk masuk ke Pritunl anda"
 pritunl setup-key
