@@ -63,6 +63,35 @@ sed -i 's/Internal/Internet/g' config.php
 sed -i '/SixXS IPv6/d' config.php
 cd
 
+# Install User Status
+echo "---------------------------------------------"
+echo "BIL  USERNAME        STATUS       EXP DATE   "
+echo "---------------------------------------------"
+C=1
+ON=0
+OFF=0
+while read mumetndase
+do
+        AKAUN="$(echo $mumetndase | cut -d: -f1)"
+        ID="$(echo $mumetndase | grep -v nobody | cut -d: -f3)"
+        exp="$(chage -l $AKAUN | grep "Account expired" | awk -F": " '{print $2}')"
+        online="$(cat /etc/openvpn/log.log | grep -Eom 1 $AKAUN | grep -Eom 1 $AKAUN)"
+        if [[ $ID -ge 500 ]]; then
+        if [[ -z $online ]]; then
+        printf "%-4s %-15s %-10s %-3s\n" "$C." "$AKAUN" "OFFLINE" "$exp"
+        OFF=$((OFF+1))
+        else
+        printf "%-4s %-15s %-10s %-3s\n" "$C." "$AKAUN" "ONLINE" "$exp"
+        ON=$((ON+1))
+        fi
+        C=$((C+1))
+        fi
+done < /etc/passwd
+JUMLAH="$(awk -F: '$3 >= 500 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+echo "---------------------------------------------"
+echo " ONLINE : $ON     OFFLINE : $OFF      [ DRCYBER ] "
+echo "------------------------------------------
+
 # About
 clear
 echo "Script ini hanya mengandungi :-"
@@ -71,10 +100,12 @@ echo "-MongoDB"
 echo "-Vnstat"
 echo "-Web Server"
 echo "-Squid Proxy Port 7166,60000"
-echo "BY MKSSHVPN"
+echo "BY DRCYBER"
 echo "TimeZone   :  Malaysia"
 echo "Vnstat     :  http://$MYIP:81/vnstat"
 echo "Pritunl    :  https://$MYIP"
+echo "UserStatus :  Untuk Run User Status Paste   ./user"
 echo "Sila login ke pritunl untuk proceed step seterusnya"
-echo "Sila copy code dibawah untuk Pritunl anda"
+echo "Sila copy code dibawah dan paste untuk masuk ke Pritunl anda"
 pritunl setup-key
+
