@@ -11,21 +11,28 @@ Create By DRCYBER
 Script ini hanya mengandungi
 
 -Pritunl
+
 -MongoDB
+
 -Vnstat
+
 -Web Server
+
 -Squid Proxy Port 7166,60000"
+
 -TimeZone : Malaysia
 
 -----------------------------------------
 
 Script
 
+
 Debian 8
 
 wget https://raw.githubusercontent.com/najmihamdi/pritunl/master/debian8.sh
 chmod +x debian8.sh
 ./debian8.sh
+
 
 Ubuntu 14
 
@@ -35,11 +42,13 @@ chmod +x ubuntu14.sh
 
 -----------------------------------------
 
+
 -----------------------------------------
 
 Ingin beli VPS Beli SILA KE DigitalOcean :- https://m.do.co/c/ec4f29ced665
 
 -----------------------------------------
+
 
 -----------------------------------------
 
@@ -50,6 +59,7 @@ Saya tidak akan bertanggungjawab jika berlaku sesuatu pada diri atau bukan pada 
 Sila dapatkan kebenaran sebelum meng"edit"
 
 -----------------------------------------
+
 
 BY DRCYBER
 
