@@ -36,28 +36,15 @@ Script
 -COPY PASTE SAHAJA PADA PUTTY DAN TUNGGU PROSES INSTALL SELESAI
 
 
-
-
-@Debian 8@
-
-wget https://raw.githubusercontent.com/drcyber96/PRITUNL-AUTO-SCRIP/master/debian8.sh
-
-chmod +x debian8.sh
-
-./debian8.sh
-
-
-
-
-
-
 @Ubuntu 14@
 
+````````
 wget https://raw.githubusercontent.com/drcyber96/PRITUNL-AUTO-SCRIP/master/ubuntu14.sh
 
 chmod +x ubuntu14.sh
 
 ./ubuntu14.sh
+````````
 
 -----------------------------------------
 
