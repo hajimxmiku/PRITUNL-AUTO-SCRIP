@@ -39,7 +39,7 @@ Script
 @Ubuntu 14.04@
 
 ````````
-wget https://raw.githubusercontent.com/long609/PRITUNL-AUTO-SCRIP/master/ubuntu14.sh
+wget https://raw.githubusercontent.com/drcyber96/PRITUNL-AUTO-SCRIP/master/ubuntu14.sh
 chmod +x ubuntu14.sh
 ./ubuntu14.sh
 ````````
